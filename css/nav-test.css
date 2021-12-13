@@ -1,0 +1,447 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+html {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+}
+
+li, button {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* height of nav, push main content down */
+main {
+  margin-top: 148px;
+}
+
+/* fixed nav applied */
+.nav-container {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background: white;
+  border-bottom: 2px solid #f3f3f3;
+  box-shadow: 0px 2px 8px 0px #bdbcbc;
+  -webkit-box-shadow: 0px 2px 8px 0px #bdbcbc;
+  width: 100%;
+}
+
+.top-header {
+  background-color: #0C7088;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.top-header p {
+  color: white;
+  font-size: 0.85rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  /* nav height added */
+  height: 80px;
+  /* 80% screen width */
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 10px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  display: block;
+  margin: 20px 0;
+  text-transform: capitalize;
+  transition: 0.1s;
+}
+
+nav a:hover, nav button:hover, nav h4:hover {
+  color: #0C7088;
+  /* color: #5a5a5a; */
+  transition: 0.1s;
+}
+
+/* how it works, h4 headers with no a href, no hover colour */
+nav .how-it-works .dropdown-header:hover {
+  color: black;
+}
+
+nav img:hover {
+  opacity: 0.9;
+  transition: 0.1s;
+}
+
+nav h4 {
+  text-transform: capitalize;
+}
+
+/* styling the log in add to cart icons  */
+nav .fas {
+  font-size: 2rem;
+  color: #0C7088;
+}
+
+/* cart icon -  no padding right for a link to be flush with container*/
+nav .nav-links-right .cart-a {
+  padding-right: 0;
+}
+
+/* Styling the caret down icon */
+nav .fa-caret-down {
+  font-size: 1.25rem;
+  color: #0C7088;
+  transition: transform 0.3s ease-out;
+}
+
+nav .dropdown-btn span {
+  padding-right: 8px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+
+nav button {
+  font-size: 1rem;
+  border: none;
+  background: none;
+  /* padding to allow the button to fill the height of container, when active it shows bottom border */
+  /* button padding top and bottom to be changed if can't see active border colour */
+  padding: 38px 10px;
+  display: inline-flex;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+nav button:hover {
+  cursor: pointer;
+}
+
+/* removing color hover for links not clickable, and opacity effect for imgs */
+.dropdown-div.how-it-works h4:hover, .dropdown-div.how-it-works img:hover {
+  color: black;
+  opacity: 1;
+}
+
+.h4-no-hover:hover {
+  color: black;
+}
+
+/* three nav div widths need to add up to 100%, logo, nav-links, nav-links-right */
+.logo {
+  width: 20%;
+}
+
+.logo img {
+  cursor: pointer;
+  width: 90%;
+}
+
+#nav-links {
+  width: 65%;
+}
+
+.nav-links-right {
+  /* width: 15%; */
+  /* width 26% allows link to be on one line */
+  width: 26%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Make sure padding left/right values are the same as the buttons */
+.nav-links-right a {
+  padding: 0 10px;
+}
+
+.nav-links-right a:hover {
+  cursor: pointer;
+}
+
+.active {
+  border-bottom: solid 4px #0C7088;
+}
+
+.active-link {
+  color: #0C7088;
+}
+
+.icon-rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-out;
+}
+
+/* removing button dropdown function in html, style blog link individually */
+.desktop-link {
+  padding: 40px 20px;
+  display: inline-flex;
+}
+
+/* hiding shop now and contact us links on desktop, show on mobile */
+.mobile-only-link {
+  display: none;
+  text-align: left;
+}
+
+/* hide hamburger and close for desktop */
+#hamgurger, #close {
+  display: none;
+}
+
+/* styling close icon indivudally, adding top 2px to ensure icons are inline due to diff sizes */
+#close .fas {
+    font-size: 50px;
+    position: relative;
+    top: 4px;
+}
+
+/* Dropdown container */
+.dropdown-container {
+  display: none;
+  background-color: #fcfcfc;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  /* has to add up all padding values of all previous values to acheive the correct height */
+  top: 148px;
+}
+
+/* Padding to dropdown div */
+.dropdown-content {
+  padding: 25px 0 35px;
+}
+
+.dropdown-div {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-evenly; */
+}
+
+.dropdown-div img {
+  width: 75px;
+}
+
+.mobile-bottom-links {
+  display: none;
+}
+
+.login-btn, .login-btn-2 {
+  display: flex;
+  align-items: center;
+}
+
+.login-btn .fas, .login-btn-2 .fas {
+  padding: 0 10px;
+}
+
+.health-span {
+  font-size: 0.7rem;
+  color: #b5b5b5;
+  text-transform: none;
+}
+
+@media screen and (max-width: 1250px) {
+  nav {
+    width: 100%;
+  }
+
+  /* adjsuting positioning slightly */
+  #hamgurger {
+    position: relative;
+    top: -3px;
+  }
+
+  /* hide close, show when hamburger clicked */
+   #close {
+    display: none;
+  }
+
+  #hamgurger, #close {
+    font-size: 3rem;
+    cursor: pointer;
+    color: #0C7088;
+  }
+
+  nav button {
+    font-size: 1.3rem;
+    padding: 25px 5%;
+    justify-content: space-between;
+  }
+
+  nav h4 {
+    font-size: 1.2rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+    margin: 25px 0;
+  }
+
+  nav .dropdown-header {
+    margin: 0;
+  }
+
+  nav .svg-img {
+    margin: 0 0 15px;
+  }
+
+  /* More margin to svg img -  sections without links */
+  nav .why-us-nav .svg-img, nav .advice .svg-img  {
+    margin: 15px 0;
+  }
+
+  /* removing border active transition */
+  nav a:hover, nav button:hover, nav h4:hover {
+    transition: none;
+  }
+
+  /* style desktop links individually - 5% left and right padding for width to be 90%, parent set to 100% */
+  .desktop-link {
+    font-size: 1.25rem;
+    padding: 25px 5%;
+    margin: 0;
+  }
+
+  /* style desktop links individually - 5% left and right padding for width to be 90%, parent set to 100% */
+  .mobile-only-link {
+    display: block;
+    font-size: 1.25rem;
+    padding: 25px 5%;
+    margin: 0;
+  }
+
+  .active {
+    border-left: solid 5px #0C7088;
+    border-bottom: solid 2px #f3f3f3;
+    border-top: solid 2px #f3f3f3;
+  }
+
+  /* drop down icon */
+  nav .fa-caret-down {
+    font-size: 2rem;
+  }
+
+  /* cart icon */
+  nav .fa-shopping-cart {
+    padding-right: 20px;
+  }
+
+  /* hiding desktop nav items */
+  #nav-links, .login-btn, .track-test-link {
+    display: none;
+  }
+
+  /* pushing nav links div below desktop nav for mobile usage */
+  #nav-links {
+    position: absolute;
+    top: 148px;
+    width: 100%;
+    background: white;
+    /* full height allowing scroll */
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  #nav-links ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* make remaining divs - logo and nav-links-right fill 100% width, 50% each */
+  .logo, .nav-links-right {
+    width: 50%;
+  }
+
+  /* Adding 5% padding either side for container width to be 90%, needed due to navlinks div being inside container */
+  .logo{
+    padding-left: 5%;
+  }
+
+  .nav-links-right {
+    padding-right: 5%;
+  }
+
+  /* show hamgurger */
+  #hamgurger {
+    display: block;
+  }
+
+  /* removing absolute positioning for container to stack below */
+  .dropdown-container {
+    position: relative;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: white;
+    border-bottom: solid 2px #f3f3f3;
+    /* allow nav to be fixed, but still scroll within element */
+    /* overflow-y: scroll; */
+  }
+
+  /* 90% width container */
+  .dropdown-content {
+    padding: 10px 0;
+  }
+
+  /* changing from rows to columns, to stack for mobile */
+  .dropdown-div {
+    flex-direction: column;
+  }
+
+  /* adding padding bottom so ul list is fully scrollable, can scroll down to the bottom of the content */
+  #nav-links ul {
+    padding-bottom: 300px;
+  }
+
+  /* showing mobile links */
+  .contact-mobile {
+    display: block;
+  }
+
+  .mobile-bottom-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 2.5% auto;
+    padding: 2.5% 0;
+    border-top: solid 3px #f3f3f3;
+    border-bottom: solid 3px #f3f3f3;
+  }
+
+  .dropdown-div div {
+    padding: 10px 0;
+  }
+}
+
+/* iphone 5/se */
+@media screen and (max-width: 365px) {
+
+  /* Making top header p go onto one line */
+  .top-header p {
+    font-size: 0.7rem;
+  }
+
+  /* pusing content further down due to top header going onto two lines */
+  /* main {
+    margin-top: 162px;
+  } */
+
+  /* Pusing mobile nav links further down to see top border */
+  /* #nav-links {
+    top: 164px;
+  } */
+}

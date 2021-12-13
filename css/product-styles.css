@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+.tests-overview {
+  margin: 30px 0;
+}
+
+/* Extra info */
+.extra-info {
+   max-width: 1100px;
+  /* width: 85%; */
+  margin: 0 auto;
+  padding: 25px 0;
+  text-align: left;
+}
+
+.extra-info h4 {
+  font-size: 1.4rem;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+.extra-info i {
+  margin-right: 5px;
+}
+
+.extra-info p {
+font-size: 0.95rem;
+}
+
+.extra-info.flex-container {
+  align-items: flex-start;
+}
+
+.extra-info div {
+  width: 30%;
+}
+.extra-info .tag {
+  height: 17px;
+  text-transform: capitalize;
+}
+
+.tag.hair {
+  border-left: solid 4px #56b9d9;
+}
+
+.tag.blood {
+  border-left: solid 4px #AC131D;
+}
+
+.tag.health {
+  border-left: solid 4px #05622D;
+}
+
+@media screen and (max-width: 600px) {
+  .hide-mobile {
+    display: none;
+  }
+  .extra-info div {
+    width: 47.5%;
+  }
+  /* First p in this div */
+  .extra-info .whats-included p:first-of-type {
+    margin-top: 45px;
+  }
+}
+
+.products-container {
+  margin: 2.5% 0 0;
+  align-items: flex-start;
+}
+
+.products-container.two-products {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product {
+  /* Makes products all the same height on hover, regardless of content on some making them larger */
+  min-height: 420px;
+  width: 20%;
+  margin: 10px 0;
+  text-align: left;
+  padding: 0 2.5%;
+  border-right: solid 2px #f6f5f5;
+  line-height: 1.5;
+  transition: 0.3s;
+}
+
+.product.right {
+  border-right: 0 !important;
+}
+
+.product-inner {
+  margin: 0 auto 20px;
+}
+
+.product:hover {
+  background: #f6f5f5;
+  transition: 0.3s;
+}
+
+.product h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.product img {
+  width: 100%;
+  /* width: 250px; */
+}
+
+.tag {
+  padding-left: 5px;
+  font-size: 0.67em;
+  text-transform: uppercase;
+  height: 7px;
+  font-weight: bold;
+  line-height: 0.8;
+  margin: 10px 0 10px;
+}
+
+.hair .tag {
+  border-left: solid 4px #56b9d9;
+}
+
+.blood .tag {
+  border-left: solid 4px #AC131D;
+}
+
+.health .tag {
+  border-left: solid 4px #05622D;
+}
+
+.product ul {
+  padding: 0 15px;
+  margin: 0;
+}
+
+.product .items-tested {
+  margin-bottom: 1px;
+}
+
+.product ul li {
+  margin: 10px 0;
+  font-size: 0.9rem;
+}
+
+.product ul p {
+  font-size: 0.8rem;
+  color: #605e5e;
+  margin: 0;
+}
+
+.product ul p  {
+  margin: 0;
+}
+
+.product .prices {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+  flex-wrap: wrap;
+}
+
+.product .prices p {
+  margin: 0 10px 0 0;
+}
+
+.product .prices .now-price {
+  margin-right: 10px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.product .prices .was-price {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: red;
+}
+
+.buttons-div {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  justify-content: space-between;
+}
+
+.product button {
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Montserrat';
+}
+
+.hair button {
+  background-color: #56b9d9;
+}
+
+.blood button {
+  background-color: #AC131D;
+}
+
+.health button{
+  background-color: #05622D;
+}
+
+.product .basket-link {
+  /* text-transform: uppercase; */
+  color: black;
+  font-weight: bold;
+  font-size: 0.75rem;
+  text-align: center;
+  /* text-align: right; */
+}
+
+.buttons-div a {
+  width: 48%;
+}
+
+/* button 100% width of buttons div a */
+.buttons-div a button {
+  width: 100%;
+}
+
+
+@media screen and (max-width: 1250px) {
+
+  .products-container.two-products {
+    align-items: flex-start;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: unset;
+  }
+
+  /* Width + padding has to add up to 50% for two columns, any more it wont fit two products */
+  .products-container .product {
+      width: 45%;
+      border-right: 0;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+
+  .products-container {
+    margin: 10% 0;
+  }
+
+  .product:hover {
+    background: none;
+  }
+
+  .tag {
+    padding-left: 5px;
+    font-size: 0.7rem;
+    height: 10px;
+    line-height: 1.1;
+    margin: 15px 0 7.5px;
+  }
+
+  .product img {
+    width: 100%;
+  }
+
+  .product h3 {
+    font-size: 1.25rem;
+  }
+
+  .product .prices .now-price {
+    margin-right: 5px;
+    font-size: 1.45rem;
+  }
+
+  .product .prices .was-price {
+    font-size: 1.1rem;
+  }
+
+  .buttons-div {
+    flex-direction: column;
+  }
+
+  .buttons-div a {
+    width: 100%;
+  }
+
+  .buttons-div button {
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .product .basket-link {
+    width: 100%;
+    text-align: center;
+    padding: 7px 0px;
+    border-radius: 8px;
+    background-color: #f6f6f6;
+    text-decoration: none;
+    font-size: 0.85rem;
+  }
+
+  .product ul li {
+    font-size: 0.85rem;
+  }
+
+}
+
+/*----------iphone 5/se---------- */
+
+@media (max-width: 320px) {
+
+  /* Making everything full width, one column due to small screen size */
+  .products-container .product {
+    width: 100%;
+  }
+
+}
